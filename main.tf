@@ -37,7 +37,7 @@ module "gke_auth" {
   depends_on = [
     google_container_cluster.this
   ]
-  source               = "terraform-google-modules/kubernetes-engine/google//modules/auth"
+  source               = "terraform-google-modules/kubernetes-engine/google/modules/auth"
   version              = ">= 24.0.0"
   project_id           = var.GOOGLE_PROJECT
   cluster_name         = google_container_cluster.this.name
